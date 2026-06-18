@@ -1,0 +1,1 @@
+ResearchAtlas is a full-stack research collaboration and analytics platform that enables researchers to upload and manage papers, discover collaborators, analyze citation networks, generate literature survey insights, and identify research trends using NLP, information retrieval, and graph analytics.
