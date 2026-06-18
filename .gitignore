@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# env
+.env
+
+# build
+dist/
+build/
+
+# logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# vscode
+.vscode/
+
+# npm
+package-lock.json
+
+# coverage
+coverage/
