@@ -4,7 +4,7 @@ const fs = require("fs");
 
 
 
-const Paper = require("../models/Paper");
+const Paper = require("../models/paper");
 
 exports.uploadPaper = async (req, res) => {
 
