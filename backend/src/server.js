@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-
+const searchRoutes = require("./routes/searchRoutes");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const paperRoutes = require("./routes/paperRoutes"); 
@@ -12,6 +12,7 @@ const app = express();
 connectDB();
 
 app.use(cors());
+app.use("/api/search", searchRoutes);
 app.use(express.json());
 
 
