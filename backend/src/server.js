@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
-
+const paperRoutes = require("./routes/paperRoutes"); 
 const app = express();
 
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/auth", authRoutes);
-
+app.use("/api/papers", paperRoutes);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
