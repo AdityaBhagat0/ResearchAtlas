@@ -7,6 +7,13 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const paperRoutes = require("./routes/paperRoutes"); 
 const app = express();
+const bookmarkRoutes = require(
+  "./routes/bookmarkRoutes"
+);
+
+const collectionRoutes = require(
+  "./routes/collectionRoutes"
+);
 
 
 connectDB();
@@ -25,6 +32,15 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/papers", paperRoutes);
+app.use(
+  "/api/bookmarks",
+  bookmarkRoutes
+);
+
+app.use(
+  "/api/collections",
+  collectionRoutes
+);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

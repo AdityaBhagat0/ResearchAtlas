@@ -5,7 +5,6 @@ const protect = async (req, res, next) => {
   try {
     let token;
 
-    
     if (
       req.headers.authorization &&
       req.headers.authorization.startsWith("Bearer")
@@ -17,7 +16,8 @@ const protect = async (req, res, next) => {
         process.env.JWT_SECRET
       );
 
-      req.user = await User.findById(decoded.id).select("-password");
+      req.user = await User.findById(decoded.id)
+        .select("-password");
 
       if (!req.user) {
         return res.status(401).json({
