@@ -7,6 +7,9 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const paperRoutes = require("./routes/paperRoutes"); 
 const app = express();
+const recommendationRoutes = require(
+  "./routes/recommendationRoutes"
+);
 const bookmarkRoutes = require(
   "./routes/bookmarkRoutes"
 );
@@ -35,6 +38,10 @@ app.use("/api/papers", paperRoutes);
 app.use(
   "/api/bookmarks",
   bookmarkRoutes
+);
+app.use(
+  "/api/recommendations",
+  recommendationRoutes
 );
 
 app.use(
